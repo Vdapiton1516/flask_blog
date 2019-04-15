@@ -54,6 +54,6 @@ def logout():
     session.pop('logged_in', None)
     flash('You were logged out')
     return redirect(url_for('login'))
-
+asdasd
 if __name__ == '__main__':
     app.run(debug=True)
