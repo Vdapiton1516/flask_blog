@@ -2,9 +2,10 @@
 <html>
     <head>
         <title>Welcome, friends!</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     </head>
     <body>
-        HELLO WORLD 11
+        HELLO WORLD !!!
         <div class="container">
         {% for message in get_flashed_messages() %}
             <div class="flash">{{ message }}</div>

@@ -56,12 +56,12 @@ def main():
 
 @app.route('/add', methods=['POST'])
 @login_required
-def add():
+    def add():
     title = request.form['title']
     post = request.form['post']
     if not title or not post:
-        flash("All fields are required. Please try again.")
-        return redirect(url_for('main'))
+    flash("All fields are required. Please try again.")
+    return redirect(url_for('main'))
     else:
         g.db = connect_db()
         g.db.execute('insert into posts (title, post) values (?, ?)',
